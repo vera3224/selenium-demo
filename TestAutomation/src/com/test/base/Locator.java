@@ -14,17 +14,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.test.util.Config;
+import com.test.bean.Config;
+import com.test.util.Log;
 
 public class Locator {
 	private String yamlFile;
-	private WebDriver driver;
+	protected WebDriver driver;
 	
 	private Map<String, Map<String, String>> extendLocator;
 	
+	public void setYamlFile(String yamlFile) {
+		this.yamlFile = yamlFile;
+	}
 	public Locator(WebDriver driver) {
-		yamlFile ="demo";
-		this.getYamlFile();
+//		yamlFile ="demo";
+//		this.getYamlFile();
 		this.driver = driver;
 		
 	}
@@ -32,7 +36,7 @@ public class Locator {
 	private Map<String, Map<String, String>> ml;
 	
 	@SuppressWarnings("unchecked")
-	public void getYamlFile() {
+	protected void getYamlFile() {
 		File f = new File("locator/"+yamlFile+".yaml");
 		try {
 			ml = Yaml.loadType(new FileInputStream(f.getAbsolutePath()), HashMap.class);
@@ -78,7 +82,7 @@ public class Locator {
 				}
 			});
 		} catch (Exception e) {
-			System.out.println(by.toString()+" is not exist until"+waitTime);
+			Log.logInfo(by.toString()+" is not exist until"+waitTime);
 		}
 		return element;
 	}
@@ -98,7 +102,7 @@ public class Locator {
 				}
 			});
 		} catch (Exception e) {
-			System.out.println(element.toString()+"is not displayed");
+			Log.logInfo(element.toString()+"is not displayed");
 		}
 		return wait;
 	}
@@ -118,7 +122,7 @@ public class Locator {
 				}
 			});
 		} catch (Exception e) {
-			System.out.println("Locator ["+element.toString()+"] is also displayed");
+			Log.logInfo("Locator ["+element.toString()+"] is also displayed");
 		}
 		return wait;
 	}
@@ -165,7 +169,7 @@ public class Locator {
 				}
 			}
 		}else {
-			System.out.println("Locator"+key+"is not exist in "+ yamlFile+".yaml");
+			Log.logInfo("Locator"+key+"is not exist in "+ yamlFile+".yaml");
 		}
 		return element;
 		
@@ -252,20 +256,20 @@ public class Locator {
 	}
 	
 
-	public static void main(String[] args) {
-		SeleniumDriver selenium = new SeleniumDriver();
-		Locator d = new Locator(selenium.getDriver());
-		selenium.getDriver().navigate().to("http://www.baidu.com");
-		selenium.analyzeLog();
-		WebElement element = d.getElement("baidu_input");
-		element.sendKeys("百度");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		selenium.getDriver().close();
-		selenium.getDriver().quit();
-	}
+//	public static void main(String[] args) {
+//		SeleniumDriver selenium = new SeleniumDriver();
+//		Locator d = new Locator(selenium.getDriver());
+//		selenium.getDriver().navigate().to("http://www.baidu.com");
+//		selenium.analyzeLog();
+//		WebElement element = d.getElement("baidu_input");
+//		element.sendKeys("百度");
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		selenium.getDriver().close();
+//		selenium.getDriver().quit();
+//	}
 }

@@ -1,0 +1,75 @@
+package com.test.util;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import com.test.bean.DBInfo;
+
+public class ConnectToDB {
+	
+	private DBInfo dbInfo;
+	private Connection conn = null;
+	private Statement stmt = null;
+	
+	public ConnectToDB() {
+		dbInfo = new DBInfo();
+	}
+
+	public DBInfo getDbInfo() {
+		return dbInfo;
+	}
+
+	public void setDbInfo(DBInfo dbInfo) {
+		this.dbInfo = dbInfo;
+	}
+	
+	public void connect(){
+		this.close();
+		this.connectMySQL();
+	}
+
+	public synchronized void close() {
+		try {
+			if (stmt != null) {
+				stmt.close();
+				stmt = null;
+			}
+			if (conn != null) {
+				conn.close();
+				conn = null;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public synchronized void connectMySQL() {
+		try {
+			Class.forName(dbInfo.getDriver()).newInstance();
+			conn = (Connection)DriverManager.getConnection("jdbc:mysql://"
+					+dbInfo.getHost()+"/"+dbInfo.getDataBase()+"?useUnicode=true&characterEncoding=uft-8",
+					dbInfo.getUser(),dbInfo.getPwd());
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		}catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void statement() {
+		if (conn == null) {
+			this.connectMySQL();
+		}
+		try {
+			stmt = (Statement) conn.createStatement();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

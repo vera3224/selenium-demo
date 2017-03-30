@@ -14,7 +14,8 @@ import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import com.test.util.Config;
+import com.test.bean.Config;
+import com.test.util.Log;
 
 public class SeleniumDriver {
 	private static WebDriver driver;
@@ -49,14 +50,14 @@ public class SeleniumDriver {
 //			options.addArguments("--test-type");
 			driver = new ChromeDriver(capabilities);
 		}else {
-			System.out.println(Config.browser+" 的值不正确，请检查！");
+			Log.logInfo(Config.browser+" 的值不正确，请检查！");
 		}
 		
 	}
-	public static void analyzeLog() {
+	public void analyzeLog() {
 		LogEntries logEntries=driver.manage().logs().get(LogType.BROWSER);
 		for(LogEntry entry:logEntries) {
-			System.out.println(new Date(entry.getTimestamp())+""+entry.getLevel()+""+entry.getMessage());
+			Log.logInfo(new Date(entry.getTimestamp())+""+entry.getLevel()+""+entry.getMessage());
 		}
 	}
 //	

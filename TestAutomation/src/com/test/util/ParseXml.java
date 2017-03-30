@@ -1,6 +1,9 @@
 package com.test.util;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -50,7 +53,7 @@ public class ParseXml {
 	 * @param elementPath 是一个xpath路径，比如“／config／driver”
 	 * @return 返回的是一个节点 Element对象
 	 * */
-	private Element getElementObject(String elementPath) {
+	public Element getElementObject(String elementPath) {
 		return (Element)document.selectSingleNode(elementPath);
 	}
 	
@@ -74,6 +77,25 @@ public class ParseXml {
 			return null;
 		}
 	}
+	
+//	针对多个结点
+	@SuppressWarnings("unchecked")
+	public List<Element> getElementObjects(String elementPath){
+		return document.selectNodes(elementPath);
+	}
+//	把子节点的信息再全部取到
+	@SuppressWarnings("unchecked")
+	public Map<String, String> getChildrenInfoByElement(Element element){
+		Map<String, String> map = new HashMap<String,String>();
+		List<Element> children = element.elements();
+		for (Element e : children) {
+			map.put(e.getName(), e.getText());
+		}
+		return map;
+
+	}
+	
+
 	
 //	测试这些方法的用途
 	public static void main(String[] args) {

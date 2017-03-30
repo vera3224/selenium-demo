@@ -1,0 +1,15 @@
+tab:
+  type:css
+  value:.login-tab.login-tab-r
+login_name:
+  type:id 
+  value:loginname
+login_pwd:
+  type:id 
+  value:nloginpwd
+login_button:
+  type:id 
+  value:loginsubmit
+errorMsg:
+  type:css
+  value:.msg-error

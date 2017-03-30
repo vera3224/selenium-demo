@@ -1,0 +1,12 @@
+package com.test.util;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.mysql.jdbc.ResultSetMetaData;
+
+public class MetaData {
+	
+	public static Map<String, ResultSetMetaData> metaData = new HashMap<String, ResultSetMetaData>();
+
+}
