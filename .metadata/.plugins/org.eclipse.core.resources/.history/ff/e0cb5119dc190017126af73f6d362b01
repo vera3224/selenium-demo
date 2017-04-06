@@ -1,0 +1,7 @@
+package com.test.page;
+
+import com.test.base.Page;
+
+public class MobileList extends Page {
+
+}

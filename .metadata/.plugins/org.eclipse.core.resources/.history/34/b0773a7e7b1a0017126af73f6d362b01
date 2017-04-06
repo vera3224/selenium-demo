@@ -1,0 +1,27 @@
+更多选项:
+  type:css
+  value:".sm-wrap"
+商品筛选华为:
+  type:id
+  value:brand-8557
+商品筛选苹果:
+  type:id
+  value:brand-14026
+商品价格筛选:
+  type:xpath
+  value:".//*[@id='J_selectorPrice']/div/div[2]/div/ul/li[3]/a"
+商品颜色筛选:
+  type:xpath
+  value:".//*[@id='J_selector']/div[14]/div/div[2]/div[1]/ul/li[2]/a"
+商品类型筛选:
+  type:xpath
+  value:".//*[@id='delivery']/a"
+第一个商品:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-img']//img"
+商品名称:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-name']//em"
+商品价格:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-price']/strong"

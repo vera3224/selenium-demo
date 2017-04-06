@@ -10,5 +10,10 @@ public class FirstPage extends Page {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public void linkToMobileList() {
+		this.getAction().moveToElement(this.getElement("手机数码京东通信")).perform();
+		this.getElement("手机品类入口").click();
+	}
 
 }

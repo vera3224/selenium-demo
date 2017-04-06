@@ -1,0 +1,58 @@
+2017-03-30 17:17:23 TestProject : 在首页点击登录按钮
+2017-03-30 17:17:34 TestProject : 选择账号登录
+2017-03-30 17:17:34 TestProject : 登录用户名为:jdtest
+2017-03-30 17:17:44 TestProject : [[ChromeDriver: chrome on MAC (b221463169339832a14270394e1b981d)] -> id: loginname]is not displayed
+2017-03-30 17:24:34 TestProject : 在首页点击登录按钮
+2017-03-30 17:24:38 TestProject : 选择账号登录
+2017-03-30 17:24:38 TestProject : 登录用户名为:jdtest
+2017-03-30 17:24:38 TestProject : 登录密码为：test1234
+2017-03-30 17:31:33 TestProject : 在首页点击登录按钮
+2017-03-30 17:31:39 TestProject : 选择账号登录
+2017-03-30 17:31:39 TestProject : 登录用户名为:jdtest
+2017-03-30 17:31:40 TestProject : 登录密码为：test1234
+2017-03-30 17:32:54 TestProject : 在首页点击登录按钮
+2017-03-30 17:33:07 TestProject : 选择账号登录
+2017-03-30 17:33:07 TestProject : 登录用户名为:jdtest
+2017-03-30 17:33:07 TestProject : 登录密码为：test1234
+2017-03-30 17:45:56 TestProject : 在首页点击登录按钮
+2017-03-30 17:46:19 TestProject : 选择账号登录
+2017-03-30 17:46:19 TestProject : 登录用户名为:jdtest
+2017-03-30 17:46:19 TestProject : 登录密码为：test1234
+2017-03-30 17:48:30 TestProject : 在首页点击登录按钮
+2017-03-30 17:48:36 TestProject : 选择账号登录
+2017-03-30 17:48:36 TestProject : 登录用户名为:jdtest
+2017-03-30 17:48:36 TestProject : 登录密码为：test1234
+2017-03-30 17:48:46 TestProject : By.className: .msg-error is not exist until10
+2017-03-30 17:49:45 TestProject : 在首页点击登录按钮
+2017-03-30 17:49:55 TestProject : 选择账号登录
+2017-03-30 17:49:55 TestProject : 登录用户名为:jdtest1
+2017-03-30 17:49:56 TestProject : 登录密码为：test1234
+2017-03-30 17:50:06 TestProject : By.className: .msg-error is not exist until10
+2017-03-30 17:52:11 TestProject : ff 的值不正确，请检查！
+2017-03-30 17:52:42 TestProject : 在首页点击登录按钮
+2017-03-30 17:52:44 TestProject : 选择账号登录
+2017-03-30 17:52:54 TestProject : By.cssSelector: .login-tab.login-tab-r>a is not exist until10
+2017-03-30 17:56:00 TestProject : 在首页点击登录按钮
+2017-03-30 17:56:03 TestProject : 选择账号登录
+2017-03-30 17:56:03 TestProject : 登录用户名为:jdtest1
+2017-03-30 17:56:03 TestProject : 登录密码为：test1234
+2017-03-30 17:56:04 TestProject : 你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理
+2017-03-30 17:56:04 TestProject : actual is [你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理], expected is [账户名与密码不匹配，请重新输入].
+2017-03-30 18:32:36 TestProject : 在首页点击登录按钮
+2017-03-30 18:32:39 TestProject : 选择账号登录
+2017-03-30 18:32:42 TestProject : 登录用户名为:jdtest1
+2017-03-30 18:32:42 TestProject : 登录密码为：test1234
+2017-03-30 18:32:44 TestProject : 你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理
+2017-03-30 18:32:44 TestProject : actual is [你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理], expected is [账户名与密码不匹配，请重新输入].
+2017-03-30 18:35:43 TestProject : 在首页点击登录按钮
+2017-03-30 18:35:46 TestProject : 选择账号登录
+2017-03-30 18:35:46 TestProject : 登录用户名为:jdtest1
+2017-03-30 18:35:46 TestProject : 登录密码为：test1234
+2017-03-30 18:35:47 TestProject : 你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理
+2017-03-30 18:35:47 TestProject : actual is [你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理], expected is [账户名与密码不匹配，请重新输入].
+2017-03-30 18:39:18 TestProject : 在首页点击登录按钮
+2017-03-30 18:39:24 TestProject : 选择账号登录
+2017-03-30 18:39:24 TestProject : 登录用户名为:jdtest1
+2017-03-30 18:39:24 TestProject : 登录密码为：test1234
+2017-03-30 18:39:26 TestProject : 你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理
+2017-03-30 18:39:26 TestProject : actual is [你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理], expected is [账户名与密码不匹配，请重新输入].

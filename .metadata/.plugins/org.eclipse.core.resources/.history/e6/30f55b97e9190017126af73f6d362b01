@@ -1,0 +1,9 @@
+login_link:
+  type:css
+  value:".link-login"
+手机数码京东通信:
+  type:xpath
+  value:"//div[@class='fs']//div[@class='J_cate case']//ul[@class='JS_navCtn cate_menu']//li[@class='cate_menu_item']//a[@href='http://shouji.jd.com/']"
+手机品类入口:
+  type:xpath
+  value:"//div[@id='cate_item2']//a[@href='http://list.jd.com/list.html?cat=9987,653,655']"

@@ -1,7 +1,0 @@
-package com.test.testcases;
-
-import com.test.base.TestBase;
-
-public class Test1 extends TestBase {
-
-}

@@ -1,6 +1,0 @@
-package com.test.bean;
-
-public enum TableBean {
-
-	USER_INFO("com.test.bean.UserInfo");
-}

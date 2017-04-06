@@ -1,0 +1,7 @@
+activeRuntime=/usr/bin
+assistantKeywordPrefixAutoAdditionEnabled=true
+eclipse.preferences.version=1
+otherRuntimes=/usr/bin
+projectModulesRecursiveAdditionOnVirtualenvEnabled=true
+red.activeRuntimeExec=Python
+red.otherRuntimesExecs=Python

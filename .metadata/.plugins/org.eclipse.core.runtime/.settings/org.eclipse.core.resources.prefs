@@ -1,2 +1,5 @@
+description.autobuilding=false
+description.buildorder=TestAutomation
+description.defaultbuildorder=false
 eclipse.preferences.version=1
 version=1

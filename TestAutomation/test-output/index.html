@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,21 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.testcases.Login" hash-for-method="testLogin({password=test1234, url=http://www.jd.com, username=jdtest1})">testLogin({password=test1234, url=http://www.jd.com, username=jdtest1})</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testcases.Shopping" hash-for-method="testShopping({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com})">testShopping({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testcases.Shopping" hash-for-method="testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})">testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,133 +120,177 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.test.testcases.Login</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.test.testcases.Shopping</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin({password=test1234, url=http://www.jd.com, username=jdtest1})">
-                  </a> <!-- testLogin({password=test1234, url=http://www.jd.com, username=jdtest1}) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">({password=test1234, url=http://www.jd.com, username=jdtest1})</span>
+                  <a name="testShopping({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com})">
+                  </a> <!-- testShopping({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com}) -->
+                  <span class="method-name">testShopping</span>
+                  <span class="parameters">({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out waiting for page load.
+Command duration or timeout: 15.05 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
+System info: host: &apos;VeradeMacBook-Pro.local&apos;, ip: &apos;192.168.1.47&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.6.0, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f6fdac4b-46b5-844d-875c-b8e953c9790f
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at com.test.base.TestBase.goTo(Unknown Source)
+	at com.test.testcases.Shopping.testShopping(Unknown Source)
+Caused by: org.openqa.selenium.TimeoutException: Timed out waiting for page load.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
+System info: host: &apos;VeradeMacBook-Pro.local&apos;, ip: &apos;192.168.1.47&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.Utils.initWebLoadingListener/&lt;(file:///var/folders/9f/plvps0w910gdwxmqq6rkdmmc0000gn/T/anonymous2786757453152344032webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9071)
+	at &lt;anonymous class&gt;.WebLoadingListener/e(file:///var/folders/9f/plvps0w910gdwxmqq6rkdmmc0000gn/T/anonymous2786757453152344032webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:5142)
+	at &lt;anonymous class&gt;.WebLoadingListener/&lt;(file:///var/folders/9f/plvps0w910gdwxmqq6rkdmmc0000gn/T/anonymous2786757453152344032webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:5150)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///var/folders/9f/plvps0w910gdwxmqq6rkdmmc0000gn/T/anonymous2786757453152344032webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})">
+                  </a> <!-- testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com}) -->
+                  <span class="method-name">testShopping</span>
+                  <span class="parameters">({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.test.page.FirstPage.linkToMobileList(Unknown Source)
+	at com.test.testcases.Shopping.testShopping(Unknown Source)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/9f/plvps0w910gdwxmqq6rkdmmc0000gn/T/testng-eclipse-331792319/testng-customsuite.xml</span>
+            <span class="header-content">/Users/vera/Github/selenium-demo/TestAutomation/run/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.testcases.Login&quot;/&gt;
+      &lt;class name=&quot;com.test.testcases.Shopping&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogin')
-data.setCell(0, 2, 'com.test.testcases.Login')
-data.setCell(0, 3, 13504);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'testShopping')
+data.setCell(0, 2, 'com.test.testcases.Shopping')
+data.setCell(0, 3, 39202);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testShopping')
+data.setCell(1, 2, 'com.test.testcases.Shopping')
+data.setCell(1, 3, 15059);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testLogin({password=test1234, url=http://www.jd.com, username=jdtest1})</span>
+              <span class="reporter-method-name">testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">2017-56-30 17:56:00 : 在首页点击登录按钮</span>
-                <span class="reporter-method-output">2017-56-30 17:56:03 : 选择账号登录</span>
-                <span class="reporter-method-output">2017-56-30 17:56:03 : 登录用户名为:jdtest1</span>
-                <span class="reporter-method-output">2017-56-30 17:56:03 : 登录密码为：test1234</span>
-                <span class="reporter-method-output">2017-56-30 17:56:04 : 你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理</span>
-                <span class="reporter-method-output">2017-56-30 17:56:04 : actual is [你的账号因安全原因被暂时封锁，请将账号和联系方式发送到shensu@jd.com，等待处理], expected is [账户名与密码不匹配，请重新输入].</span>
+                <span class="reporter-method-output">2017-04-06 12:50:59 : 从首页进入手机搜索页面</span>
+                <span class="reporter-method-output">2017-04-06 12:51:38 : [[FirefoxDriver: firefox on MAC (f6fdac4b-46b5-844d-875c-b8e953c9790f)] -> xpath: .//*[@id='cate_item2']/div[1]/div[2]/dl[1]/dd/a[1]]is not displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.testcases.Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.testcases.Shopping</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testLogin({password=test1234, url=http://www.jd.com, username=jdtest1})</span>
-                <span class="method-start">3646 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testShopping({mobileprice=1000-1699, mobilename=商品筛选华为, url=http://www.jd.com})</span>
+                <span class="method-start">4483 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testShopping({mobileprice=3700-3899, mobilename=商品筛选苹果, url=http://www.jd.com})</span>
+                <span class="method-start">19543 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">17151 ms</span>
+                <span class="method-start">58745 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

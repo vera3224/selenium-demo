@@ -1,6 +1,7 @@
 package com.test.base;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import org.openqa.selenium.WebDriver;
@@ -52,6 +53,8 @@ public class SeleniumDriver {
 		}else {
 			Log.logInfo(Config.browser+" 的值不正确，请检查！");
 		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Config.waitTime, TimeUnit.SECONDS);
 		
 	}
 	public void analyzeLog() {

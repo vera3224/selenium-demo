@@ -1,0 +1,27 @@
+更多选项:
+  type:css
+  value:"span.sm-wrap"
+商品筛选华为:
+  type:linkText
+  value:"华为（HUAWEI）"
+商品筛选苹果:
+  type:id
+  value:brand-14026
+商品价格筛选:
+  type:linkText
+  value:"1000-1699"
+商品颜色筛选:
+  type:linkText
+  value:"黑色"
+商品类型筛选:
+  type:css
+  value:"#delivery > a > i"
+第一个商品:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-img']//img"
+商品名称:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-name']//em"
+商品价格:
+  type:xpath
+  value:"//div[@id='plist']//li[@class='gl-item'][1]//div[@class='p-price']/strong"

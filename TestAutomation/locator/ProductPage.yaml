@@ -1,0 +1,12 @@
+商品名称:
+  type:xpath
+  value:."//*[@id='J_selectorMore']/span"
+商品价格:
+  type:css
+  value:.price.J-p-3882469
+加入购物车:
+  type:id
+  value:InitCartUrl
+去购物车结算:
+  type:id
+  value:GotoShoppingCart

@@ -1,0 +1,30 @@
+2017-04-05 18:18:58 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:19:08 TestAutomation : By.xpath: //div[@class='fs']//div[@class='J_cate case']//ul[@class='JS_navCtn cate_menu']//li[@class='cate_menu_item']//a[@href='http://shouji.jd.com/'] is not exist until10
+2017-04-05 18:19:09 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:19:19 TestAutomation : By.xpath: //div[@class='fs']//div[@class='J_cate case']//ul[@class='JS_navCtn cate_menu']//li[@class='cate_menu_item']//a[@href='http://shouji.jd.com/'] is not exist until10
+2017-04-05 18:21:41 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:21:53 TestAutomation : By.xpath: //div[@id='cate_item2']//a[@href='http://list.jd.com/list.html?cat=9987,653,655'] is not exist until10
+2017-04-05 18:23:12 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:23:26 TestAutomation : By.cssSelector: .sm-wrap is not exist until10
+2017-04-05 18:23:27 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:23:38 TestAutomation : By.cssSelector: .sm-wrap is not exist until10
+2017-04-05 18:31:17 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:31:36 TestAutomation : By.cssSelector: .sm-wrap is not exist until15
+2017-04-05 18:35:19 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:35:47 TestAutomation : By.cssSelector: .sm-wrap is not exist until15
+2017-04-05 18:37:28 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:37:46 TestAutomation : By.cssSelector: .sm-wrap is not exist until15
+2017-04-05 18:38:16 TestAutomation : 从首页进入手机搜索页面
+2017-04-05 18:38:35 TestAutomation : By.xpath: //div[@class='sl-v-logos']//a[@title='华为（HUAWEI）'] is not exist until15
+2017-04-06 11:36:15 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 11:36:34 TestAutomation : By.xpath: .//*[@id='brand-8557']/a is not exist until15
+2017-04-06 11:41:02 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 11:41:21 TestAutomation : By.id: brand-8557 is not exist until15
+2017-04-06 11:52:46 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 11:53:06 TestAutomation : By.linkText: 华为（HUAWEI） is not exist until15
+2017-04-06 12:44:01 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 12:44:19 TestAutomation : By.linkText: 华为（HUAWEI） is not exist until15
+2017-04-06 12:44:20 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 12:44:39 TestAutomation : By.linkText: 华为（HUAWEI） is not exist until15
+2017-04-06 12:50:59 TestAutomation : 从首页进入手机搜索页面
+2017-04-06 12:51:38 TestAutomation : [[FirefoxDriver: firefox on MAC (f6fdac4b-46b5-844d-875c-b8e953c9790f)] -> xpath: .//*[@id='cate_item2']/div[1]/div[2]/dl[1]/dd/a[1]]is not displayed

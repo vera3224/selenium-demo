@@ -7,12 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.test.base.TestBase;
-import com.test.bean.Config;
 import com.test.page.FirstPage;
 import com.test.page.LoginPage;
 import com.test.util.Assertion;
 import com.test.util.Log;
-import com.test.base.SeleniumDriver;
 
 public class Login extends TestBase {
 	

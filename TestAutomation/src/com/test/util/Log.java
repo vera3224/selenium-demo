@@ -14,7 +14,7 @@ public class Log {
     private static boolean flag = false;
 
     private static synchronized void getPropertyFile() {
-        logger = Logger.getLogger("TestProject");
+        logger = Logger.getLogger("TestAutomation");
         PropertyConfigurator.configure(new File(filePath).getAbsolutePath());
         flag = true;
     }
@@ -25,7 +25,7 @@ public class Log {
     }
     
     static{
-    	 logger = Logger.getLogger("");
+    	 logger = Logger.getLogger("TestAutomation");
          PropertyConfigurator.configure(new File(filePath).getAbsolutePath());
     }
 
@@ -42,7 +42,7 @@ public class Log {
     }
 
     public static void logWarn(Object message) {
-//        Log.getFlag();
+        Log.getFlag();
         logger.warn(message);
         Reporter.log(new TimeString().getSimpleDateFormat()+" : "+message);
     }

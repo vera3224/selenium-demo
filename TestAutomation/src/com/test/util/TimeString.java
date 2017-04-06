@@ -21,7 +21,7 @@ public class TimeString {
 	 * @return
 	 * */
 	public String getSimpleDateFormat() {
-		SimpleDateFormat df =new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		SimpleDateFormat df =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return df.format(new Date());
 	}
 	

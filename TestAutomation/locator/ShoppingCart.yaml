@@ -1,0 +1,15 @@
+商品名称:
+  type:xpath
+  value:"//div[@id='sales-promotion_%s']/parent::div/parent::div//div[@class='p-name']/a"
+商品价格:
+  type:xpath
+  value:"//div[@id='sales-promotion_%s']/parent::div/parent::div//div[@class='cell p-price']//strong"
+勾选商品:
+  type:xpath
+  value:"//div[@id='sales-promotion_%s']/parent::div/parent::div//input[@class='jdcheckbox']"
+删除商品:
+  type:xpath
+  value:"//div[@id='sales-promotion_%s']/parent::div/parent::div//a[@class='cart-remove']"
+确定删除:
+  type:xpath
+  value:"//div[@class='ui-dialog-content']//a[contains(@class,'select-remove')]"

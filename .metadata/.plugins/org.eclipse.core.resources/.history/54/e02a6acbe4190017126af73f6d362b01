@@ -1,0 +1,9 @@
+login_link:
+  type:css
+  value:".link-login"
+手机数码京东通信:
+  type:xpath
+  value:"//div[@id='categorys-2014']//div[@class='dd-inner']//a[@href='http://shouji.jd.com/']"
+手机品类入口:
+  type:xpath
+  value:"//div[@id='categorys-2014']//a[@href='http://list.jd.com/list.html?cat=9987,653,655']"
