@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
+import org.testng.IAnnotationTransformer;
+import org.testng.annotations.ITestAnnotation;
+
+/**
+ * @author vera
+ *2017年4月12日
+ */
+public class RetryListener implements IAnnotationTransformer {
+
+	/* (non-Javadoc)
+	 * @see org.testng.IAnnotationTransformer#transform(org.testng.annotations.ITestAnnotation, java.lang.Class, java.lang.reflect.Constructor, java.lang.reflect.Method)
+	 */
+	@Override
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

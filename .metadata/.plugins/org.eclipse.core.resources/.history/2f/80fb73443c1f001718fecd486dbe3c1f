@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+/**
+ * @author vera
+ *2017年4月12日
+ */
+public class RetryListener extends com.netease.qa.testng.RetryListener {
+
+}

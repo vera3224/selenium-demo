@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.robotframework.ide.tableditor.activePage./Sbux-RF/StatamicTest.txt">
+		<item value="red.settings" key="activePage"/>
+	</section>
+	<section name="problemPreferences">
+		<item value="true" key="NAME_SHADOWING_AND_CONFLICTS"/>
+		<item value="true" key="IMPORT"/>
+		<item value="true" key="UNNECESSARY_CODE"/>
+		<item value="true" key="CODE_STYLE"/>
+		<item value="true" key="RUNTIME"/>
+		<item value="true" key="PROJECT_CONFIGURATION"/>
+		<item value="true" key="ROBOT_VERSION"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./Sbux-RF/testFlow-Statamic-web.txt">
+		<item value="" key="activePage"/>
+	</section>
+</section>

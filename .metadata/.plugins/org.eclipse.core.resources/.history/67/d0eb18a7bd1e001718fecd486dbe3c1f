@@ -1,0 +1,5 @@
+package com.demo.test.plugins.arrow.utils;
+
+public class ConfigReader {
+
+}

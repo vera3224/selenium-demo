@@ -43,6 +43,7 @@ public class SeleniumDriver {
 		}else if ("chrome".equals(Config.browser)) {
 //			System.setProperty("webdriver.chrome.driver", "files/chromedriver.exe");
 //			抓取页面上JS error
+			/*
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 			LoggingPreferences logPrefs = new LoggingPreferences();
 			logPrefs.enable(LogType.BROWSER, Level.ALL);
@@ -50,6 +51,12 @@ public class SeleniumDriver {
 //			ChromeOptions options= new ChromeOptions();
 //			options.addArguments("--test-type");
 			driver = new ChromeDriver(capabilities);
+			LogEntries logEntries=driver.manage().logs().get(LogType.BROWSER);
+			for(LogEntry entry:logEntries) {
+				Log.logInfo(new Date(entry.getTimestamp())+""+entry.getLevel()+""+entry.getMessage());
+			}
+			*/
+			driver=new ChromeDriver();
 		}else {
 			Log.logInfo(Config.browser+" 的值不正确，请检查！");
 		}

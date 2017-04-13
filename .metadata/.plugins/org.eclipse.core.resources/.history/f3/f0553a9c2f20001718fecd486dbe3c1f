@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.demo.test.testcases.login;
+
+import com.demo.test.base.BasePrepare;
+
+/**
+ * @author vera
+ *2017年4月13日
+ */
+public class LoginPage_001_LoginSuccess_Test extends BasePrepare {
+
+}

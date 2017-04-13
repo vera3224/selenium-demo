@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+import java.util.List;
+
+import org.testng.IReporter;
+import org.testng.ISuite;
+import org.testng.xml.XmlSuite;
+
+/**
+ * @author vera
+ *2017年4月13日
+ */
+public class PowerEmailableReporter implements IReporter {
+
+	/* (non-Javadoc)
+	 * @see org.testng.IReporter#generateReport(java.util.List, java.util.List, java.lang.String)
+	 */
+	@Override
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

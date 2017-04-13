@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
+
+/**
+ * @author vera
+ *2017年4月12日
+ *netease_arrow 来自网易的截图插件
+ */
+public class TestResultListener extends TestListenerAdapter {
+	private static Logger logger = Logger.getLogger(TestResultListener.class.getName());
+	protected ITestContext testContext = null;//这是新加的
+	String browser = null;
+	
+	@Override
+	public void onStart(ITestContext testContext) {
+//		这是新加的，用于对context进行统一
+		this.testContext = testContext;
+		browser = String.valueOf(testContext.getCurrentXmlTest().getParameter("browserName"));
+		
+		super.onStart(testContext);
+	}
+	
+	@Override
+	public void onTestFailure(ITestResult tr) {
+		super.onTestFailure(tr);
+		logger.warn(tr.getName()+"测试用例执行失败！");
+		WebDriver webDriver = (WebDriver) testContext.getAttribute("SELENIUM_DRIVER");//这里是取driver
+		saveScreenShot(tr,webDriver,browser);
+	}
+
+	private void saveScreenShot(ITestResult tr, WebDriver webDriver, String browser) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

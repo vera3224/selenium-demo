@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.demo.test.pageshelper;
+
+import org.openqa.selenium.By;
+
+import com.demo.test.utils.SeleniumUtil;
+
+/**
+ * @author vera
+ *2017年4月13日
+ */
+public class FramePageHelper {
+//	进入frame - 根据frame的元素定位进入
+	public static void jumpInToFrame(SeleniumUtil seleniumUtil,By by){
+		seleniumUtil.switchFrame(seleniumUtil.findElement(by));
+	}
+	
+//	回到默认的frame
+	public static void jumpOut(SeleniumUtil seleniumUtil) {
+		seleniumUtil.outFrame();
+	}
+
+}

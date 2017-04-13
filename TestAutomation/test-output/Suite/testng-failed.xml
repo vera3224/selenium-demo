@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.test.testcases.Shopping">
+      <class name="com.test.testcases.Test1">
         <methods>
-          <include name="testShopping" invocation-numbers="0 1"/>
-          <include name="closeDriver"/>
+          <include name="testLogin"/>
           <include name="initialDriver"/>
         </methods>
-      </class> <!-- com.test.testcases.Shopping -->
+      </class> <!-- com.test.testcases.Test1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

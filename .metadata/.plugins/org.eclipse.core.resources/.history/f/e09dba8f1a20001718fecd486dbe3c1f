@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+/**
+ * @author vera
+ *2017年4月13日
+ */
+public class TestngRetry implements IRetryAnalyzer {
+
+	/* (non-Javadoc)
+	 * @see org.testng.IRetryAnalyzer#retry(org.testng.ITestResult)
+	 */
+	@Override
+	public boolean retry(ITestResult result) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

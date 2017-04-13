@@ -1,0 +1,192 @@
+package com.demo.test.utils;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.server.handler.DescribeElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+
+import com.thoughtworks.selenium.webdriven.commands.Refresh;
+import com.thoughtworks.selenium.webdriven.commands.WaitForPageToLoad;
+
+import bsh.commands.dir;
+
+public class SeleniumUtil {
+//	使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息
+	public static Logger logger = Logger.getLogger(SeleniumUtil.class.getName());
+	public ITestResult it = null;
+	public WebDriver driver = null;
+	public WebDriver window = null;
+	
+//	启动浏览器
+	public void launchBrowser(String browserName, ITestContext context, String webUrl, int timeOut) {
+		SelectBrowser select = new SelectBrowser();
+		driver = select.selectExplorerByName(browserName, context);
+		try {
+			maxWindow(browserName);
+			WaitForPageLoading(timeOut);
+			get(webUrl);
+		} catch (TimeoutException e) {
+			// TODO: handle exception
+			logger.warn("注意：页面没有完全加载出来，刷新重试!!");
+			refresh();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String status = (String) js.executeScript("return document.readyState");
+			logger.info("打印状态:"+status);
+		}
+	}
+	
+	
+	public void close() {
+		driver.close();
+	}
+	
+	public void refresh() {
+		// TODO Auto-generated method stub
+		driver.navigate().refresh();
+		logger.info("页面刷新成功");
+	}
+	
+	public void back() {
+		driver.navigate().back();
+		}
+	public void forward() {
+		driver.navigate().forward();
+		}
+	
+	public void get(String url) {
+	// TODO Auto-generated method stub
+		driver.get(url);
+		logger.info("打开测试页面:["+url+"]");
+		}
+	
+	public void WaitForPageLoading(int pageLoadTime) {
+	// TODO Auto-generated method stub
+		driver.manage().timeouts().pageLoadTimeout(pageLoadTime, TimeUnit.SECONDS);
+		}
+	
+	public void maxWindow(String browserName) {
+	// TODO Auto-generated method stub
+		logger.info("最大化浏览器"+browserName);
+		driver.manage().window().maximize();
+		}
+	public void setBrowserSize(int width, int height) {
+		driver.manage().window().setSize(new Dimension(width, height));
+	}
+	
+	public WebElement findElement(By by) {
+		return driver.findElement(by);
+	}
+	
+	public List<WebElement>  findElementsBy(By by) {
+		return driver.findElements(by);
+	}
+
+	public void click(By byElement) {
+		try {
+			clickTheClickable(byElement,System.currentTimeMillis(),2500);
+		} catch (StaleElementReferenceException e) {
+			// TODO: handle exception
+			logger.error("The element you clicked:["+byElement+"] is no longer exist!");
+			Assert.fail("The element you clicked:["+byElement+"] is no longer exist!");
+		}catch (Exception e) {
+			// TODO: handle exception
+			logger.error("Failed to click element ["+byElement+"]");
+			Assert.fail("Failed to click element ["+byElement+"]",e);
+		}
+		logger.info("点击元素["+byElement+"]");
+	}
+
+//	不能点击时候，重试点击操作
+	public void clickTheClickable(By byElement, long stratTime, int timeOut) throws Exception{
+		try {
+			findElement(byElement).click();
+			} catch (Exception e) {
+			// TODO: handle exception
+				if (System.currentTimeMillis()- stratTime >timeOut) {
+					logger.warn(byElement+" is unclickable");
+					throw new Exception(e);
+				}else {
+					Thread.sleep(500);
+					logger.warn(byElement+" is unclickable, try again");
+					clickTheClickable(byElement, stratTime, timeOut);
+				}
+		}
+	}
+	
+//	获得页面标题
+	public String getTitle() {
+		return driver.getTitle();
+	}
+	
+//	获得元素的文本
+	public String getText(By elementLocator) {
+		return driver.findElement(elementLocator).getText().trim();
+	}
+	
+//	获得元素 属性的文本
+	public String getAttributeText(By elementLocator, String attribute) {
+		return driver.findElement(elementLocator).getAttribute(attribute).trim();
+	}
+	
+//	清楚操作
+	public void clear(By byElement) {
+		try {
+			findElement(byElement).clear();
+		} catch (Exception e) {
+			logger.error("清除元素["+byElement+"]上的内容失败！");
+		}
+		logger.info("清除元素["+byElement+"]上的内容");
+	}
+	
+//	向输入框输入内容
+	public void type(By byElement, String key) {
+		try {
+			findElement(byElement).sendKeys(key);
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.error("输入 ["+key+"]到元素["+byElement+"]失败");
+			Assert.fail("输入 ["+key+"]到元素["+byElement+"]失败");
+		}
+		logger.info("输入 ["+key+"]到["+byElement+"]");
+	}
+	
+	/*模拟键盘操作，比如Ctrl+A，Ctrl+C
+	 * 1. WebElement element - 要被操作的元素
+	 * 2. Keys key - 键盘上的功能键
+	 * 3. String keyword - 键盘上的字母
+	 * */
+	public void pressKeysOnKeyboard(WebElement element, Keys key,String keyword) {
+		element.sendKeys(Keys.chord(key,keyword));
+	}
+	
+//	在给定的时间内去查找元素，没找到就超时，抛出异常
+	public void waitForElementToLoad(int timeOut , final By By) {
+		logger.info("开始查找元素["+By+"]");
+		try {
+			(new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
+
+				@Override
+				public Boolean apply(WebDriver driver) {
+					WebElement element = driver.findElement(By);
+					return element.isDisplayed();
+				}
+			});
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

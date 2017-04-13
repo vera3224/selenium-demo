@@ -1,0 +1,9 @@
+package com.demo.test.testcases.login;
+
+import org.testng.annotations.Test;
+
+public class LoginPage_001_LoginSuccess_Test {
+  @Test
+  public void f() {
+  }
+}

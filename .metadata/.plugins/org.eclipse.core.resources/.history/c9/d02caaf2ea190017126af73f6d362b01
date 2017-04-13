@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
-<!-- browser 表示要运行的浏览器，waitTime 等待元素出现的最长timeout时间 -->
-	<browser> firefox</browser>
-	<waitTime> 10</waitTime>
-</config>

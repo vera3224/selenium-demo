@@ -1,9 +1,6 @@
 package com.test.testcases;
 
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.test.base.TestBase;

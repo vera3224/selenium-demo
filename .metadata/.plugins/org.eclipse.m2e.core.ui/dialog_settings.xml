@@ -12,4 +12,23 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="410" key="x"/>
+		<item value="124" key="y"/>
+		<item value="489" key="height"/>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.demo"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="autotest"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 </section>

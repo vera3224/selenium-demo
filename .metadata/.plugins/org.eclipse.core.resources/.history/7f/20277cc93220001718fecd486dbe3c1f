@@ -1,0 +1,18 @@
+package com.demo.test.testcases.login;
+
+import java.util.Map;
+
+import org.testng.annotations.Test;
+
+import com.demo.test.base.BasePrepare;
+import com.demo.test.pageshelper.LoginPageHelper;
+
+public class LoginPage_001_LoginSuccess_Test extends BasePrepare {
+  @Test(dataProvider="testData")
+  public void loginSuccess(Map<String , String> data) {
+//	  等待登录页面加载
+	  LoginPageHelper.waitLoginPageLoad(seleniumUtil, timeOut);
+//	  输入登录信息
+	  LoginPageHelper.typeLoginInfo(seleniumUtil, data.get("USERNAME"), data.get("PASSWORD"));
+  }
+}

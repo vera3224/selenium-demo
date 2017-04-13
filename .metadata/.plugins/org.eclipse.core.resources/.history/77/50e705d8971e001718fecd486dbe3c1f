@@ -1,0 +1,61 @@
+
+package com.demo.test.base;
+
+import org.apache.log4j.Logger;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+import com.demo.test.utils.LogConfiguration;
+import com.demo.test.utils.SeleniumUtil;
+
+/**
+ * @author vera
+ *2017年4月11日
+ */
+public class BasePrepare {
+//	输出本页面日志 初始化
+	static Logger logger = Logger.getLogger(BasePrepare.class.getName());
+	protected SeleniumUtil seleniumUtil = null;
+//	添加成员变量来获取beforeClass 传人的context 参数
+	protected ITestContext testContext = null;
+	protected String webUrl="";
+	protected int timeOut = 0;
+	protected int sleepTime = 0;
+	protected int waitMillisecondsForAlert = 0;
+	
+	@BeforeClass
+//	启动浏览器并打开测试页面
+	public void startTest(ITestContext context){
+		LogConfiguration.initLog(this.getClass().getSimpleName());
+		seleniumUtil = new SeleniumUtil();
+//		这里得到了context值
+		this.testContext = context;
+//		从testng.xml文件中获取浏览器属性值
+		String browserName = context.getCurrentXmlTest().getParameter("browserName");
+		timeOut = Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
+		sleepTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("sleepTime"));
+		waitMillisecondsForAlert = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitMillisecondsForAlert"));
+		webUrl = context.getCurrentXmlTest().getParameter("testurl");
+		
+		try {
+//			启动浏览器 launchBrowser 方法，主要是打开浏览器，输入测试地址，并最大化窗口
+			seleniumUtil.launchBrowser(browserName, context, webUrl, timeOut);
+		} catch (Exception e) {
+			logger.error("浏览器不能正常工作，请检查原因",e);
+		}
+//		设置一个testng 上下文属性，将driver存起来，之后可以用context随时取到
+//		主要是提供arrow获取driver对象使用，因为arrow截图方法需要一个driver对象
+		testContext.setAttribute("SELENIUM_DRIVER", seleniumUtil.driver);
+	}
+
+	
+	@AfterClass
+//	结束测试关闭浏览器
+	public void endTest(){
+		if (seleniumUtil.driver != null) {
+//			退出浏览器
+			seleniumUtil.quit();
+		}
+	}
+}

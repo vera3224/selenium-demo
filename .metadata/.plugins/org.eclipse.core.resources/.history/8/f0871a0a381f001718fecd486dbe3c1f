@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.demo.test.plugins.arrow;
+
+import org.testng.TestListenerAdapter;
+
+/**
+ * @author vera
+ *2017年4月12日
+ */
+public class TestResultListener extends TestListenerAdapter {
+
+}

@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.demo.test.pageshelper;
+
+import org.apache.log4j.Logger;
+
+/**
+ * @author vera
+ *2017年4月13日
+ */
+public class HomePageHelper {
+	public static Logger logger = Logger.getLogger(HomePageHelper.class);
+	
+	/*
+	 * 等待登录页面元素加载
+	 * @param seleniumUtil api封装引用对象
+	 * @param timeOut 等待元素超时的时间
+	 * */
+
+}

@@ -1,0 +1,15 @@
+package com.demo.test.utils;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+
+
+//在不同的平台上选择对应的浏览器，系统平台程序自动判断是什么平台
+public class SelectBrowser {
+	static Logger logger = Logger.getLogger(SelectBrowser.class.getName());
+
+	public WebDriver selectExplorerByName(String browser,ITestContext contect){
+		
+	}
+}
