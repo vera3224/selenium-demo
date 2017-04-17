@@ -2,17 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="get" key="selection"/>
+		<item value="outFram" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="get"/>
-			<item value="build.xml"/>
-			<item value="System.out.println"/>
-			<item value="println"/>
-			<item value="merge"/>
+			<item value="outFram"/>
+			<item value="out"/>
+			<item value="isSelected"/>
+			<item value="doesElementsExist"/>
+			<item value="does"/>
+			<item value="isDisplayed"/>
+			<item value="WaitForPageLoading"/>
+			<item value="getLocator"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Log.Info"/>

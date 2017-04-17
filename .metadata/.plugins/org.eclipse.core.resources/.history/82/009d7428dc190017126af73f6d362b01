@@ -1,7 +1,0 @@
-package com.test.page;
-
-import com.test.base.Page;
-
-public class ProductPage extends Page {
-
-}

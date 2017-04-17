@@ -1,8 +1,0 @@
-package com.demo.test.utils;
-
-
-//在不同的平台上选择对应的浏览器，系统平台程序自动判断是什么平台
-public class SelectBrowser {
-	static Logger logger = Logger.getLogger(SelectBrowser.class.getName());
-
-}

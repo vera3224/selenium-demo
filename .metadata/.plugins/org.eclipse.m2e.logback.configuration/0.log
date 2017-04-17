@@ -825,3 +825,8 @@ java.lang.NullPointerException: null
 2017-04-13 16:16:52,407 [Worker-405] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /autotest/src
 2017-04-13 16:16:52,408 [Worker-405] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /autotest/src/test/java because it overlaps with /autotest/src
 2017-04-13 16:16:54,813 [Worker-405] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 30 sec
+2017-04-17 18:11:10,397 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-04-17 18:14:37,981 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-17 18:14:38,001 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/vera/Github/selenium-demo/autotest/src/main/resources
+2017-04-17 18:14:38,004 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-17 18:14:38,005 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/vera/Github/selenium-demo/autotest/src/test/resources

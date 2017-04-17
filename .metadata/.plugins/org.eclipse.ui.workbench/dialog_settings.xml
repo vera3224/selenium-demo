@@ -22,11 +22,11 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.robotframework.ide.eclipse.wizards.newRobotProject" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.testng.eclipse.wizards.NewTestNGClassWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui.Basic"/>
-			<item value="org.eclipse.oomph"/>
 			<item value="org.robotframework.ide.eclipse.wizards.category"/>
+			<item value="org.testng.eclipse"/>
 			<item value="org.eclipse.wst.XMLCategory"/>
 		</list>
 	</section>

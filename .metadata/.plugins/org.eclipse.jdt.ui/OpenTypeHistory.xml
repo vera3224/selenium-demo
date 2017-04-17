@@ -2,4 +2,11 @@
 <typeInfoHistroy>
 <typeInfo handle="=TestAutomation/src&lt;com.test.base{Page.java[Page" modifiers="1" timestamp="1490867866000"/>
 <typeInfo handle="=TestAutomation/src&lt;com.test.base{TestBase.java[TestBase" modifiers="1" timestamp="1490867866000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/.m2\/repository\/org\/testng\/testng\/6.9.10\/testng-6.9.10.jar&lt;org.testng(TestListenerAdapter.class[TestListenerAdapter" modifiers="33" timestamp="1473227140000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/Project\/arrow-0.1.0.jar&lt;com.netease.qa.testng(RetryListener.class[RetryListener" modifiers="33" timestamp="1491905810000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/.m2\/repository\/org\/testng\/testng\/6.9.10\/testng-6.9.10.jar&lt;org.testng(IAnnotationTransformer.class[IAnnotationTransformer" modifiers="1537" timestamp="1473227140000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/.m2\/repository\/org\/testng\/testng\/6.9.10\/testng-6.9.10.jar&lt;org.testng.annotations(IAnnotation.class[IAnnotation" modifiers="1537" timestamp="1473227140000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/.m2\/repository\/org\/testng\/testng\/6.9.10\/testng-6.9.10.jar&lt;org.testng(IReporter.class[IReporter" modifiers="1537" timestamp="1473227140000"/>
+<typeInfo handle="=autotest/\/Users\/vera\/.m2\/repository\/org\/testng\/testng\/6.9.10\/testng-6.9.10.jar&lt;org.testng(IRetryAnalyzer.class[IRetryAnalyzer" modifiers="1537" timestamp="1473227140000"/>
+<typeInfo handle="=autotest/src&lt;com.demo.test.base{BasePrepare.java[BasePrepare" modifiers="1" timestamp="1492073112000"/>
 </typeInfoHistroy>
