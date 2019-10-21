@@ -7,30 +7,23 @@ assignees: ''
 
 ---
 
-**To Reproduce**
-Steps to reproduce the behaviour:
+**Steps To Reproduce**
 1. 
 2. 
 
 **Expected**
-A clear and concise description of what you expected to happen.
 
 **Actual**
-A clear and concise description of what actually happens.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Attachments**
 
-**Desktop (please complete the following information):**
+**Device info:**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Test environment:**
+ - STG / DEV /PROD
+ - Version 
 
-**Additional context**
-Add any other context about the problem here.
+
