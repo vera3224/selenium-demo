@@ -15,7 +15,7 @@ Steps to reproduce the behaviour:
 **Expected**
 A clear and concise description of what you expected to happen.
 
-**Actual***
+**Actual**
 A clear and concise description of what actually happens.
 
 **Screenshots**
